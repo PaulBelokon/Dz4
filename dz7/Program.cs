@@ -145,7 +145,7 @@ int[,] arrayresult = CreateArrayWithRandomNumber(m, n);
 Print2DArray(arrayresult);
 
 Console.WriteLine();
-
+GetSredneeSum(arrayresult);
 Console.WriteLine();
 
 
@@ -193,4 +193,28 @@ void Print2DArray(int[,] array)
 
 
 
+
+
+void GetSredneeSum(int[,] arrayresult)
+{
+   
+    
+    double sumres = 0;
+  
+    
+    for (int j = 0; j < arrayresult.GetLength(1); j++)
+    {
+        
+        for (int i = 0; i < arrayresult.GetLength(0); i++) 
+        {
+            
+         sumres = (sumres + arrayresult[i, j]);
+
+        }
+         sumres = sumres/m;
+     Console.Write(sumres + " ; ");
+     
+    }
+Console.WriteLine();
+}
 
