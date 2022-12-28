@@ -148,7 +148,7 @@ Console.WriteLine();
 GetSredneeSum(arrayresult);
 Console.WriteLine();
 
-
+/*
 for (int j = 0; j < arrayresult.GetLength(1); j++)
 {
     double sum = 0;
@@ -161,7 +161,7 @@ for (int j = 0; j < arrayresult.GetLength(1); j++)
 }
 Console.WriteLine();
 
-
+*/
 
 
 
@@ -215,6 +215,6 @@ void GetSredneeSum(int[,] arrayresult)
      Console.Write(sumres + " ; ");
      
     }
-Console.WriteLine();
+
 }
 
