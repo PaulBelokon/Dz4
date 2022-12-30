@@ -8,22 +8,21 @@ int number = int.Parse(Console.ReadLine());
 VoidArrayNto1(number);
 void VoidArrayNto1(int number, int i = 0)
 {
-   i++;
-    if (i>number)
+   
+    if (number<1)
     {
         return;
     }
 
 
     
-    Console.Write($"{i}; ");
- 
+    Console.Write($"{number}; ");
+ number--;
 
     VoidArrayNto1(number,i);
 }
+
 */
-
-
 
 /*
 
@@ -33,7 +32,7 @@ M = 1; N = 15 -> 120
 M = 4; N = 8. -> 30
 
 */
-/*
+
 int number = int.Parse(Console.ReadLine());
 int number2 = int.Parse(Console.ReadLine());
 int resultmain = VoidArrayNto1(number, number2);
@@ -44,7 +43,7 @@ int VoidArrayNto1(int number, int number2, int i = 0)
   
    
    
-    if (number2>number)
+    if (number2>=number)
     {
         result += number;   
     }
@@ -55,13 +54,14 @@ int VoidArrayNto1(int number, int number2, int i = 0)
   number ++;
    return result + VoidArrayNto1(number,number2);
 }
-*/
+
 
 /*
 Задача 68: Напишите программу вычисления функции Аккермана с помощью рекурсии. Даны два неотрицательных числа m и n.
 m = 2, n = 3 -> A(m,n) = 9
 m = 3, n = 2 -> A(m,n) = 29
 */
+/*
 int number = int.Parse(Console.ReadLine());
 int number2 = int.Parse(Console.ReadLine());
 
@@ -77,3 +77,4 @@ int MethodAkermana(int number, int number2, int i = 0)
       return MethodAkermana(number - 1, MethodAkermana(number, number2 - 1));
 }
 
+*/

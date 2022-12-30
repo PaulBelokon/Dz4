@@ -1,4 +1,5 @@
-﻿/*Задача 54: Задайте двумерный массив. Напишите программу, которая упорядочит по убыванию элементы каждой строки двумерного массива.
+﻿using System;
+/*Задача 54: Задайте двумерный массив. Напишите программу, которая упорядочит по убыванию элементы каждой строки двумерного массива.
 Например, задан массив:
 1 4 7 2
 5 9 2 3
@@ -224,6 +225,7 @@ int[,] GetSqMatrixMatrix(int[,] arrayresult, int[,] arrayresult1)
 27(0,0,1) 90(0,1,1)
 26(1,0,1) 55(1,1,1)
 */
+
 Console.Clear();
 Console.WriteLine("Введите число m");
 int m = int.Parse(Console.ReadLine());
@@ -231,66 +233,35 @@ Console.WriteLine("Введите число n");
 int n = int.Parse(Console.ReadLine());
 Console.WriteLine("Введите число d");
 int d = int.Parse(Console.ReadLine());
-int[,,] arrayresult = CreateArrayWithRandomNumber(m, n, d);
-Print2DArray(arrayresult);
+int[,,] array3D = new int[m, n, d];
+Print2DArray(CreateArray(array3D));
 
-void CreateArrayWithRandomNumber(int m, int n, int d)
-{
-    Random random = new Random();
-    int[,,] array = new int[m, n, d];
-    int number;
-    for (int i = 0; i < array.GetLength(0); i++)
-            {
-                array[i] = random.Next(100);
-                y = x[i];
-                if (i >= 1)
-                {
-                    for (int j = 0; j < i; j++)
-                    {
-                        while (x[i] == x[j])
-                        {
-                            x[i] = random.Next(100);
-                            j = 0;
-                            y = x[i];
-                        }
- 
-                        y = x[i];
-                    }
-                }
-                Console.WriteLine(x[i]);
-            }
-}
 
-/*
-void CreateArray(int[,,] array3D)
+
+int[,,] CreateArray(int[,,] array3D)
 {
-  int[] temp = new int[array3D.GetLength(0) * array3D.GetLength(1) * array3D.GetLength(2)];
+  
   int  number;
   for (int i = 0; i < temp.GetLength(0); i++)
   {
-    temp[i] = new Random().Next(10, 100);
-    number = temp[i];
+
+
     if (i >= 1)
     {
       for (int j = 0; j < i; j++)
       {
-        while (temp[i] == temp[j])
+       
         {
-          temp[i] = new Random().Next(10, 100);
-          j = 0;
-          number = temp[i];
+          
+       
+          
         }
-          number = temp[i];
-      }
+          
+      
     }
   }
+  return ;
 }
-
-*/
-
-
-
-
 
 
 void Print2DArray(int[,,] array)
@@ -328,3 +299,69 @@ void Print2DArray(int[,,] array)
 11 16 15 06
 10 09 08 07
 */
+
+
+/*
+int n = 4;
+int[,] kvadrat = new int[n, n];
+
+int temp = 1;
+int i = 0;
+int j = 0;
+
+while (temp <= kvadrat.GetLength(0) * kvadrat.GetLength(1))
+{
+  kvadrat[i, j] = temp;
+  temp++;
+  if (i <= j + 1 && i + j < kvadrat.GetLength(1) - 1)
+    j++;
+  else if (i < j && i + j >= kvadrat.GetLength(0) - 1)
+    i++;
+  else if (i >= j && i + j > kvadrat.GetLength(1) - 1)
+    j--;
+  else
+    i--;
+}
+
+Print2DArray(kvadrat);
+
+void Print2DArray (int[,] array)
+{
+  for (int i = 0; i < array.GetLength(0); i++)
+  {
+    for (int j = 0; j < array.GetLength(1); j++)
+    {
+      if (array[i,j] / 10 <= 0)
+      Console.Write($" {array[i,j]} ");
+
+      else Console.Write($"{array[i,j]} ");
+    }
+    Console.WriteLine();
+  }
+}
+
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
